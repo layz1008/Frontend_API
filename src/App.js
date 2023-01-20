@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Nav from "./componets/Nav.jsx"
+import Home from "./screens/Home.jsx";
+import ChampionsPage from "./screens/ChampionsPage.jsx";
+import ChampionDetail from "./screens/ChampionsDetail.jsx";
+import ChampionCreate from "./screens/ChampionCreate.jsx";
+
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/champions" element={<ChampionsPage />} />
+        <Route path="/champions/:id" element={<ChampionDetail />} />
+        <Route path="/add-champion" element={<ChampionCreate />} />
+
+      </Routes>
     </div>
   );
 }
