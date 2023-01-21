@@ -22,15 +22,16 @@ export default function ChampionDetail() {
   }
 
   return (
-    <div>
+    <div className="champion-detail">
       <h2>{champion.name}</h2>
       <p>{champion.title}</p>
       <p>{champion.blurb}</p>
       
-      <button onClick={handleDelete}>Destroy Champ!</button>
+      <button className="delete-button" onClick={handleDelete}>Destroy Champ!</button>
     </div>
   );
 }
+
 
 
 
