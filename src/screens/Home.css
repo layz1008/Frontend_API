@@ -1,0 +1,8 @@
+.home {
+    background-image: url(https://www.leagueoflegends.com/static/open-graph-2e582ae9fae8b0b396ca46ff21fd47a8.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 650px;
+    height: 100%;
+}
